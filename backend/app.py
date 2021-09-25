@@ -12,18 +12,18 @@ db = SQLAlchemy(app)
 sessionmaker = sqlalchemy.orm.sessionmaker(db.engine)
 
 
-class Todo(db.Model):
-    __tablename__ = 'todos'
-    id = db.Column('todo_id', db.Integer, primary_key=True)
-    title = db.Column(db.String(60))
+class Transaction(db.Model):
+    __tablename__ = 'transactions'
+    id = db.Column('transaction_id', db.Integer, primary_key=True)
+    value = db.Column(db.Float)
     text = db.Column(db.String)
-    done = db.Column(db.Boolean)
+    category = db.Column(db.String)
     pub_date = db.Column(db.DateTime)
 
-    def __init__(self, title, text):
-        self.title = title
+    def __init__(self, value, text, category=None):
+        self.value = value
         self.text = text
-        self.done = False
+        self.category = category
         self.pub_date = datetime.utcnow()
 
 
@@ -32,23 +32,23 @@ def show_all():
     def callback(session):
         return render_template(
             'show_all.html',
-            todos=session.query(Todo).order_by(Todo.pub_date.desc()).all())
+            todos=session.query(Transaction).order_by(Transaction.pub_date.desc()).all())
     return run_transaction(sessionmaker, callback)
 
 
 @app.route('/new', methods=['GET', 'POST'])
 def new():
     if request.method == 'POST':
-        if not request.form['title']:
-            flash('Title is required', 'error')
+        if not request.form['value']:
+            flash('Value is required', 'error')
         elif not request.form['text']:
             flash('Text is required', 'error')
         else:
             def callback(session):
-                todo = Todo(request.form['title'], request.form['text'])
-                session.add(todo)
+                transaction = Transaction(request.form['title'], request.form['text'])
+                session.add(Transaction)
             run_transaction(sessionmaker, callback)
-            flash(u'Todo item was successfully created')
+            flash(u'Transaction was successfully created')
             return redirect(url_for('show_all'))
     return render_template('new.html')
 
@@ -56,8 +56,8 @@ def new():
 @app.route('/update', methods=['POST'])
 def update_done():
     def callback(session):
-        for todo in session.query(Todo).all():
-            todo.done = ('done.%d' % todo.id) in request.form
+        for transaction in session.query(Transaction).all():
+            todo.done = ('done.%d' % transaction.id) in request.form
     run_transaction(sessionmaker, callback)
     flash('Updated status')
     return redirect(url_for('show_all'))
