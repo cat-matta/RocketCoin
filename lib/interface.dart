@@ -16,11 +16,11 @@ class HttpStuff {
   var new_transaction =
       Uri.parse(base_url + 'new'); //Parses the flask url and gets data
 
-  new_trans(value, name, category) async {
+  new_trans(value, name) async {
     http.Response response = await client.post(new_transaction, body: {
       'value': value,
       'name': name,
-      'category': category,
+      // 'category': category,
     });
 
     if (response.statusCode == 200) {

@@ -45,6 +45,7 @@ Future<String> getTransactions() async {
 //     print(items1[i]);
 //   }
 // }
+var current = [500];
 
 class _MainScreenState extends State<MainScreen> {
   @override
@@ -189,10 +190,8 @@ class _MainScreenState extends State<MainScreen> {
                       print("pressed");
                       print(name.text);
                       print(double.parse(value.text));
-                      changeVal(double.parse(value.text));
-                      var category = "Rand";
-                      var status =
-                          await t.new_trans(value.text, name.text, category);
+                      // var category = "Rand";
+                      var status = await t.new_trans(value.text, name.text);
                       if (status == true) {
                         print("added to db");
                       }
@@ -213,8 +212,4 @@ class _MainScreenState extends State<MainScreen> {
       ),
     );
   }
-}
-
-void changeVal(double val) {
-  print("value is: $val");
 }

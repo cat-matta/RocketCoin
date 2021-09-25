@@ -45,6 +45,9 @@ class _TransactionsListState extends State<TransactionsList> {
                   itemCount: items.length,
                   itemBuilder: (context, index) {
                     String key = items.keys.elementAt(index);
+                    num sum = 0;
+                    sum += items[key];
+                    // print("sum: $sum");
 
                     return Container(
                       child: ListTile(
