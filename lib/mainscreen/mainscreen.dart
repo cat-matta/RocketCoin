@@ -197,7 +197,7 @@ class _MainScreenState extends State<MainScreen> {
                         print("added to db");
                       }
                     },
-                    child: Text(
+                    child: new Text(
                       "Add Transaction",
                       style: GoogleFonts.spaceGrotesk(
                           textStyle: TextStyle(
