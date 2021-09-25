@@ -1,6 +1,8 @@
 import 'dart:convert' as convert;
 
 import 'package:flutter/foundation.dart';
+import 'mainscreen/mainscreen.dart';
+
 import 'package:http/http.dart' as http;
 
 String base_url =
@@ -42,13 +44,13 @@ class HttpStuff {
     http.Response response = await client.get(showall);
     if (response.statusCode == 200) {
       //If 200 we get into the page
-      var r = convert.jsonDecode(response.body);
-      String name = r["name"];
-      print("FLUTTER SIGN IN ALL GOOD!");
-      return name;
+
+      final json = response.body;
+      // Iterable I
+      return json;
     } else if (response.statusCode == 400) {
       print(convert.jsonDecode(response.body));
-      print("FLUTTER SIGN IN ALL BAD!");
+      print("Uh Oh!");
       return false;
     }
   }
