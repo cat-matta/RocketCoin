@@ -6,6 +6,10 @@ name = "pypi"
 [packages]
 flask = "*"
 sqlalchemy = "*"
+cockroachdb = "*"
+flask-sqlalchemy = "*"
+psycopg2 = "*"
+sqlalchemy-cockroachdb = "*"
 
 [dev-packages]
 
