@@ -1,32 +1,27 @@
-import 'package:client/Screens/SignIn/background.dart';
-import 'package:client/Screens/SignIn/signin.dart';
-import 'package:client/Screens/SignIn/signinbtn.dart';
-import 'package:client/Screens/SignUp/signupbtn.dart';
-import 'package:client/Screens/Main/cardmodel.dart';
-import 'package:client/constants.dart';
+import 'package:rocketcoin/background.dart';
+import 'package:rocketcoin/Screens/SignIn/signin.dart';
+import 'package:rocketcoin/Screens/SignIn/signinbtn.dart';
+import 'package:rocketcoin/Screens/SignUp/signupbtn.dart';
+import 'package:rocketcoin/Screens/Main/cardmodel.dart';
+import 'package:rocketcoin/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:client/userinfo.dart';
 import 'package:carousel_slider/carousel_controller.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:prompt_dialog/prompt_dialog.dart';
+import 'package:rocketcoin/interface.dart';
 
-// for now empty, add some dummy data here later after reading the API docs
-// String name = User.name;
-final List<List<String>> items = [
-  ["item1", "23"],
-  ["item3", "21"],
-  ["item2", "20"],
-  ["item4", "22"],
-  ["item5", "200"],
-  ["item6", "211"],
-  ["item7", "2211"],
-  ["item8", "2212"],
-  ["item5", "200"],
-  ["item6", "211"],
-  ["item7", "2211"],
-  ["item8", "2212"]
-];
+import 'transactionslist.dart';
+
+var t = HttpStuff();
+
+final value = TextEditingController();
+final name = TextEditingController();
+Future<String> getTransactions() async {
+  var response = await t.show_all();
+  print(response);
+  return response;
+}
 
 class MainScreen extends StatelessWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -41,7 +36,7 @@ class MainScreen extends StatelessWidget {
     return Scaffold(
       drawer: Theme(
         data: Theme.of(context).copyWith(
-          canvasColor: BackgroundColor.withOpacity(0.7),
+          canvasColor: DarkBlueAccent.withOpacity(0.6),
         ),
         child: Drawer(
           child: ListView(
@@ -164,6 +159,9 @@ class MainScreen extends StatelessWidget {
         ),
       ),
       appBar: AppBar(
+        backgroundColor: BackgroundColor.withOpacity(0.1),
+        foregroundColor: BackgroundColor.withOpacity(0.1),
+        shadowColor: BackgroundColor.withOpacity(0),
         centerTitle: true,
         leading: Builder(
           builder: (context) => IconButton(
@@ -179,14 +177,14 @@ class MainScreen extends StatelessWidget {
           "$users_name's Wallet",
           style: GoogleFonts.spaceGrotesk(
             textStyle: TextStyle(
-                color: LightBlueAccent.withOpacity(0.8),
+                color: LightBlueAccent,
                 fontSize: 25,
                 fontWeight: FontWeight.bold),
           ),
         ),
         actions: [
           PopupMenuButton(
-              color: BackgroundColor.withOpacity(0.7),
+              color: DarkBlueAccent.withOpacity(0.8),
               icon: Icon(
                 Icons.add_rounded,
                 color: PinkAccent,
@@ -284,7 +282,7 @@ class MainScreen extends StatelessWidget {
                   CarouselSlider(
                       items: [
                         Container(
-                            // height: 200,
+                            height: 25,
                             width: 300,
                             decoration: BoxDecoration(
                               gradient: LinearGradient(
@@ -311,7 +309,7 @@ class MainScreen extends StatelessWidget {
                               ),
                             )),
                         Container(
-                            // height: 200,
+                            height: 250,
                             width: 300,
                             decoration: BoxDecoration(
                               gradient: LinearGradient(
@@ -360,57 +358,6 @@ class MainScreen extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-}
-
-class TransactionsList extends StatefulWidget {
-  const TransactionsList({Key? key}) : super(key: key);
-
-  @override
-  _TransactionsListState createState() => _TransactionsListState();
-}
-
-class _TransactionsListState extends State<TransactionsList> {
-  @override
-  Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-
-    return Container(
-      decoration: BoxDecoration(
-          // color: Colors.white.withOpacity(1),
-          gradient: LinearGradient(colors: [MedBlueAccent, PinkAccent]),
-          borderRadius: BorderRadius.circular(16)),
-      padding: EdgeInsets.all(8.0),
-      height: size.height / 1.7,
-      width: size.width - 20,
-      child: ListView.builder(
-          itemCount: items.length,
-          itemBuilder: (context, index) {
-            return ListTile(
-              title: Row(
-                children: [
-                  Text(
-                    items[index][0],
-                    style: GoogleFonts.spaceGrotesk(
-                        textStyle: TextStyle(
-                            color: BackgroundColor,
-                            fontSize: 20,
-                            fontWeight: FontWeight.normal)),
-                  ),
-                  Spacer(),
-                  Text(
-                    "\$" + items[index][1],
-                    style: GoogleFonts.spaceGrotesk(
-                        textStyle: TextStyle(
-                            color: BackgroundColor,
-                            fontSize: 20,
-                            fontWeight: FontWeight.normal)),
-                  ),
-                ],
-              ),
-            );
-          }),
     );
   }
 }
@@ -495,7 +442,7 @@ class CategoriesScroller extends StatelessWidget {
                 margin: EdgeInsets.only(right: 20),
                 height: categoryHeight,
                 decoration: BoxDecoration(
-                    color: Colors.lightBlueAccent.shade400,
+                    color: LightBlueAccent,
                     borderRadius: BorderRadius.all(Radius.circular(20.0))),
                 child: Padding(
                   padding: const EdgeInsets.all(12.0),

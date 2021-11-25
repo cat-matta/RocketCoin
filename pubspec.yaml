@@ -31,6 +31,10 @@ dependencies:
   http: ^0.13.3
   sleek_circular_slider: ^2.0.1
   google_fonts: ^2.1.0
+  carousel_slider: ^4.0.0
+  prompt_dialog: ^1.0.5
+  cryptography: ^2.0.0
+  sizer: ^2.0.13
 
 dev_dependencies:
   flutter_test:
@@ -52,6 +56,10 @@ flutter:
     # - images/a_dot_burr.jpeg
     # - images/a_dot_ham.jpeg
     - assets/images/rocketcoin.png
+    - assets/images/accent1.png
+    - assets/images/accent2.png
+    - assets/images/accent3.png
+    - assets/images/accent4.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

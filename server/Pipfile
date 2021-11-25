@@ -4,8 +4,16 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+flask = "*"
+requests = "*"
+pymongo = "*"
+python-dotenv = "*"
+dnspython = "*"
+jsonify = "*"
+flask-cors = "*"
+colorama = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.9"
+python_version = "3.8"

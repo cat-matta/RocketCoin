@@ -4,16 +4,16 @@ import 'package:flutter/material.dart';
 import 'package:rocketcoin/interface.dart';
 import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:rocketcoin/mainscreen/mainscreen.dart';
+import 'package:rocketcoin/Screens/Main/budget.dart';
 
-class Transaction extends StatefulWidget {
-  const Transaction({Key? key}) : super(key: key);
+class SetBudget extends StatefulWidget {
+  const SetBudget({Key? key}) : super(key: key);
 
   @override
-  _TransactionState createState() => _TransactionState();
+  _SetBudget createState() => _SetBudget();
 }
 
-class _TransactionState extends State<Transaction> {
+class _SetBudget extends State<SetBudget> {
   @override
   Widget build(BuildContext context) {
     return Material(

@@ -30,7 +30,7 @@ class SignInBttn extends StatelessWidget {
             )),
         child: Text(
           "Sign in",
-          style: GoogleFonts.habibi(
+          style: GoogleFonts.spaceGrotesk(
               textStyle: TextStyle(
             color: LightGrey.withOpacity(0.8),
             fontSize: 24,
@@ -53,7 +53,7 @@ class SignInBttn extends StatelessWidget {
               content: Text(
                 "Fields cannot be empty",
                 textAlign: TextAlign.center,
-                style: GoogleFonts.habibi(
+                style: GoogleFonts.spaceGrotesk(
                   textStyle: TextStyle(
                     color: LightGrey.withOpacity(0.8),
                     fontSize: 20,
@@ -84,7 +84,7 @@ class SignInBttn extends StatelessWidget {
                 content: Text(
                   "Username or password invalid",
                   textAlign: TextAlign.center,
-                  style: GoogleFonts.habibi(
+                  style: GoogleFonts.spaceGrotesk(
                     textStyle: TextStyle(
                       color: LightGrey.withOpacity(0.8),
                       fontSize: 20,

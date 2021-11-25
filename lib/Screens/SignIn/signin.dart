@@ -1,4 +1,4 @@
-import 'package:client/hash.dart';
+import 'package:rocketcoin/hash.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -6,8 +6,8 @@ import '../../interface.dart';
 import 'UserNameField.dart';
 import '../../constants.dart';
 import '../SignUp/signup.dart';
-import 'LogoDark.dart';
-import 'background.dart';
+import '../../LogoDark.dart';
+import 'package:rocketcoin/background.dart';
 import 'package:http/http.dart';
 
 import 'signinbtn.dart';

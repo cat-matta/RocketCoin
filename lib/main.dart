@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-
-// import 'mainscreen/mainscreen.dart';
-
-import 'transaction/transaction.dart';
+import 'package:rocketcoin/Screens/SignUp/signup.dart';
+// import 'package:rocketcoin/Screens/mainscreen/mainscreen.dart';
+import 'Screens/Main/mainscreen.dart';
+import 'Screens/SignIn/signin.dart';
+import 'constants.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,10 +17,14 @@ class MyApp extends StatelessWidget {
       title: 'RocketCoin',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: Colors.blue[900],
-        scaffoldBackgroundColor: Colors.blue[900],
+        primaryColor: BackgroundColor,
+        scaffoldBackgroundColor: BackgroundColor,
       ),
-      home: SafeArea(child: Transaction()),
+      home: SafeArea(
+        child: MainScreen(),
+        top: false,
+        bottom: false,
+      ),
     );
   }
 }

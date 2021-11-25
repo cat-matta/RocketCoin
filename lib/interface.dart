@@ -1,12 +1,12 @@
 import 'dart:convert' as convert;
 
 import 'package:flutter/foundation.dart';
-import 'mainscreen/mainscreen.dart';
+import 'package:rocketcoin/Screens/Main/budget.dart';
 
 import 'package:http/http.dart' as http;
 
 String base_url =
-    "http://192.168.1.6:5000/"; // change this url when running flask server
+    "http://127.0.0.1:5000/"; // change this url when running flask server
 
 class HttpStuff {
   final client = http.Client();

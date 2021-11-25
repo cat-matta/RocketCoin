@@ -30,7 +30,7 @@ class SignUpBttn extends StatelessWidget {
             )),
         child: Text(
           "Sign up",
-          style: GoogleFonts.habibi(
+          style: GoogleFonts.spaceGrotesk(
             textStyle: TextStyle(
               color: LightGrey.withOpacity(0.8),
               fontSize: 24,
@@ -57,7 +57,7 @@ class SignUpBttn extends StatelessWidget {
               content: Text(
                 "Fields cannot be empty",
                 textAlign: TextAlign.center,
-                style: GoogleFonts.habibi(
+                style: GoogleFonts.spaceGrotesk(
                   textStyle: TextStyle(
                     color: LightGrey.withOpacity(0.8),
                     fontSize: 20,
@@ -81,7 +81,7 @@ class SignUpBttn extends StatelessWidget {
               content: Text(
                 "Passwords do not match",
                 textAlign: TextAlign.center,
-                style: GoogleFonts.habibi(
+                style: GoogleFonts.spaceGrotesk(
                   textStyle: TextStyle(
                     color: LightGrey.withOpacity(0.8),
                     fontSize: 20,
@@ -117,7 +117,7 @@ class SignUpBttn extends StatelessWidget {
                 content: Text(
                   "Username or email already exist",
                   textAlign: TextAlign.center,
-                  style: GoogleFonts.habibi(
+                  style: GoogleFonts.spaceGrotesk(
                     textStyle: TextStyle(
                       color: LightGrey.withOpacity(0.8),
                       fontSize: 20,

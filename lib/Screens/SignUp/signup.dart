@@ -1,14 +1,14 @@
-import 'package:client/hash.dart';
+import 'package:rocketcoin/hash.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
-import 'package:client/interface.dart';
+import 'package:rocketcoin/interface.dart';
 import '../SignIn/signin.dart';
 import '../../constants.dart';
-import '../SignIn/LogoDark.dart';
+import '../../LogoDark.dart';
 import 'EmailField.dart';
 import 'UserNameField.dart';
-import 'background.dart';
+import 'package:rocketcoin/background.dart';
 import 'signupbtn.dart';
 
 class SignUp extends StatelessWidget {
@@ -44,7 +44,7 @@ class Body extends StatelessWidget {
           // const SizedBox(
           //   height: 10,
           // ),
-          Spacer(),
+          // Spacer(),
           UserNameField(),
           // const SizedBox(
           //   height: 40,
@@ -64,6 +64,7 @@ class Body extends StatelessWidget {
           Spacer(),
 
           SignUpBttn(),
+          Spacer(),
         ],
       ),
     );
