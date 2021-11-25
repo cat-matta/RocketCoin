@@ -138,7 +138,7 @@ class _PasswordFieldState extends State<PasswordField> {
       child: Form(
         child: Container(
           decoration: BoxDecoration(
-              color: LightBlueAccent.withOpacity(0.2),
+              color: DarkBlueAccent.withOpacity(0.6),
               borderRadius: BorderRadius.all(Radius.circular(15))),
           child: TextFormField(
             controller: passwordFieldController,

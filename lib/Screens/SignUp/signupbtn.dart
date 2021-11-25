@@ -20,8 +20,8 @@ class SignUpBttn extends StatelessWidget {
       child: TextButton(
           style: TextButton.styleFrom(
               padding: const EdgeInsets.all(15),
-              backgroundColor: MedBlueAccent.withOpacity(
-                  0.2), //Color.fromRGBO(27, 63, 207, .2),
+              backgroundColor: DarkBlueAccent.withOpacity(
+                  0.6), //Color.fromRGBO(27, 63, 207, .2),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(15),
                 side: BorderSide(

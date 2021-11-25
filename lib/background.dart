@@ -17,6 +17,7 @@ class Background extends StatelessWidget {
       width: double.infinity,
       child: Stack(
         children: <Widget>[
+          // Positioned(child: Image.asset("assets/images/accent1.png")),
           child,
         ],
       ),

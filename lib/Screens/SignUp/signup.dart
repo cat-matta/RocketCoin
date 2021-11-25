@@ -125,7 +125,7 @@ class _PasswordFieldState extends State<PasswordField> {
       width: 262,
       child: Container(
         decoration: BoxDecoration(
-            color: LightBlueAccent.withOpacity(0.2),
+            color: DarkBlueAccent.withOpacity(0.6),
             borderRadius: BorderRadius.all(Radius.circular(15))),
         child: Form(
           child: TextFormField(
@@ -190,7 +190,7 @@ class _ConfirmPasswordFieldState extends State<ConfirmPasswordField> {
       width: 262,
       child: Container(
         decoration: BoxDecoration(
-            color: LightBlueAccent.withOpacity(0.2),
+            color: DarkBlueAccent.withOpacity(0.6),
             borderRadius: BorderRadius.all(Radius.circular(15))),
         child: Form(
           child: TextFormField(
@@ -259,7 +259,7 @@ class _NameField extends State<NameField> {
       width: 262,
       child: Container(
         decoration: BoxDecoration(
-            color: LightBlueAccent.withOpacity(0.2),
+            color: DarkBlueAccent.withOpacity(0.6),
             borderRadius: BorderRadius.all(Radius.circular(15))),
         child: Form(
           child: TextFormField(
