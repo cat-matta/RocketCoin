@@ -23,13 +23,14 @@ class _UserNameFieldState extends State<UserNameField> {
       child: Form(
         child: Container(
           decoration: BoxDecoration(
-              color: DarkBlueAccent.withOpacity(0.6),
+              color: LightPinkAccent.withOpacity(1),
+              border: Border.all(color: DarkBlueAccent, width: 3),
               borderRadius: BorderRadius.all(Radius.circular(15))),
           child: TextFormField(
             controller: new_userNameFieldController,
             style: GoogleFonts.spaceGrotesk(
               textStyle:
-                  TextStyle(color: LightGrey.withOpacity(0.8), fontSize: 20),
+                  TextStyle(color: DarkBlueAccent.withOpacity(1), fontSize: 20),
             ),
             decoration: InputDecoration(
               border: OutlineInputBorder(
@@ -38,13 +39,13 @@ class _UserNameFieldState extends State<UserNameField> {
                 padding: const EdgeInsetsDirectional.only(start: 8.0),
                 child: Icon(
                   Icons.person_outline_rounded, // this is for the help button
-                  color: LightBlueAccent,
+                  color: DarkBlueAccent,
                 ),
               ),
               labelText: 'Username...',
               labelStyle: GoogleFonts.spaceGrotesk(
-                textStyle:
-                    TextStyle(color: LightGrey.withOpacity(0.8), fontSize: 20),
+                textStyle: TextStyle(
+                    color: DarkBlueAccent.withOpacity(1), fontSize: 20),
                 fontWeight: FontWeight.bold,
               ),
               // fillColor: LightBlueAccent.withOpacity(0.2),

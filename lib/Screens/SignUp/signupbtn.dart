@@ -20,19 +20,19 @@ class SignUpBttn extends StatelessWidget {
       child: TextButton(
           style: TextButton.styleFrom(
               padding: const EdgeInsets.all(15),
-              backgroundColor: DarkBlueAccent.withOpacity(
-                  0.6), //Color.fromRGBO(27, 63, 207, .2),
+              backgroundColor: LightPinkAccent.withOpacity(
+                  1), //Color.fromRGBO(27, 63, 207, .2),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(15),
                 side: BorderSide(
-                  color: LightBlueAccent.withOpacity(0.2),
+                  color: DarkBlueAccent.withOpacity(1),
                 ), //color: Color.fromRGBO(44, 190, 248, 0.1)
               )),
           child: Text(
             "Sign up",
             style: GoogleFonts.spaceGrotesk(
               textStyle: TextStyle(
-                color: LightGrey.withOpacity(0.8),
+                color: DarkBlueAccent.withOpacity(1),
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),

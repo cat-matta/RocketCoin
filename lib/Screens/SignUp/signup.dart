@@ -125,7 +125,8 @@ class _PasswordFieldState extends State<PasswordField> {
       width: 262,
       child: Container(
         decoration: BoxDecoration(
-            color: DarkBlueAccent.withOpacity(0.6),
+            color: LightPinkAccent.withOpacity(1),
+            border: Border.all(color: DarkBlueAccent, width: 3),
             borderRadius: BorderRadius.all(Radius.circular(15))),
         child: Form(
           child: TextFormField(
@@ -134,8 +135,8 @@ class _PasswordFieldState extends State<PasswordField> {
               enableSuggestions: false,
               autocorrect: false,
               style: GoogleFonts.spaceGrotesk(
-                textStyle:
-                    TextStyle(color: LightGrey.withOpacity(0.8), fontSize: 20),
+                textStyle: TextStyle(
+                    color: DarkBlueAccent.withOpacity(1), fontSize: 20),
               ),
               decoration: InputDecoration(
                 border: OutlineInputBorder(
@@ -144,13 +145,13 @@ class _PasswordFieldState extends State<PasswordField> {
                   padding: const EdgeInsetsDirectional.only(start: 8.0),
                   child: Icon(
                     Icons.lock_outline_rounded, // this is for the help button
-                    color: LightBlueAccent,
+                    color: DarkBlueAccent,
                   ),
                 ),
                 labelText: 'Password...',
                 labelStyle: GoogleFonts.spaceGrotesk(
                   textStyle: TextStyle(
-                    color: LightGrey.withOpacity(0.8),
+                    color: DarkBlueAccent.withOpacity(1),
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                   ),
@@ -190,7 +191,8 @@ class _ConfirmPasswordFieldState extends State<ConfirmPasswordField> {
       width: 262,
       child: Container(
         decoration: BoxDecoration(
-            color: DarkBlueAccent.withOpacity(0.6),
+            color: LightPinkAccent.withOpacity(1),
+            border: Border.all(color: DarkBlueAccent, width: 3),
             borderRadius: BorderRadius.all(Radius.circular(15))),
         child: Form(
           child: TextFormField(
@@ -200,7 +202,7 @@ class _ConfirmPasswordFieldState extends State<ConfirmPasswordField> {
             autocorrect: false,
             style: GoogleFonts.spaceGrotesk(
               textStyle: TextStyle(
-                color: LightGrey.withOpacity(0.8),
+                color: DarkBlueAccent.withOpacity(1),
                 fontSize: 20,
               ),
             ),
@@ -211,13 +213,13 @@ class _ConfirmPasswordFieldState extends State<ConfirmPasswordField> {
                 padding: const EdgeInsetsDirectional.only(start: 8.0),
                 child: Icon(
                   Icons.lock_outline_rounded, // this is for the help button
-                  color: LightBlueAccent,
+                  color: DarkBlueAccent,
                 ),
               ),
-              labelText: 'Confirm Password...',
+              labelText: 'Confirm Pass...',
               labelStyle: GoogleFonts.spaceGrotesk(
                 textStyle: TextStyle(
-                  color: LightGrey.withOpacity(0.8),
+                  color: DarkBlueAccent.withOpacity(1),
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                 ),
@@ -259,7 +261,8 @@ class _NameField extends State<NameField> {
       width: 262,
       child: Container(
         decoration: BoxDecoration(
-            color: DarkBlueAccent.withOpacity(0.6),
+            color: LightPinkAccent.withOpacity(1),
+            border: Border.all(color: DarkBlueAccent, width: 3),
             borderRadius: BorderRadius.all(Radius.circular(15))),
         child: Form(
           child: TextFormField(
@@ -274,13 +277,13 @@ class _NameField extends State<NameField> {
                   padding: const EdgeInsetsDirectional.only(start: 8.0),
                   child: Icon(
                     Icons.person_rounded, // this is for the help button
-                    color: LightBlueAccent,
+                    color: DarkBlueAccent,
                   ),
                 ),
                 labelText: 'Name...',
                 labelStyle: GoogleFonts.spaceGrotesk(
                   textStyle: TextStyle(
-                    color: LightGrey.withOpacity(0.8),
+                    color: DarkBlueAccent.withOpacity(1),
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                   ),

@@ -213,7 +213,12 @@ class MainScreen extends StatelessWidget {
                                 color: BackgroundColor, fontSize: 18)),
                       ));
                 } else if (newValue == 2) {
-                  print("add transaction");
+                  await prompt(context,
+                      title: Text("Add Transaction",
+                          style: GoogleFonts.spaceGrotesk(
+                            textStyle:
+                                TextStyle(color: BackgroundColor, fontSize: 18),
+                          )));
                 }
               },
               itemBuilder: (context) => [

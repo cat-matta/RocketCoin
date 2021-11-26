@@ -138,7 +138,8 @@ class _PasswordFieldState extends State<PasswordField> {
       child: Form(
         child: Container(
           decoration: BoxDecoration(
-              color: DarkBlueAccent.withOpacity(0.6),
+              color: LightPinkAccent.withOpacity(1),
+              border: Border.all(color: DarkBlueAccent, width: 3),
               borderRadius: BorderRadius.all(Radius.circular(15))),
           child: TextFormField(
             controller: passwordFieldController,
@@ -147,7 +148,7 @@ class _PasswordFieldState extends State<PasswordField> {
             autocorrect: false,
             style: GoogleFonts.spaceGrotesk(
                 textStyle: TextStyle(
-              color: LightGrey.withOpacity(0.8),
+              color: DarkBlueAccent.withOpacity(1),
               fontSize: 20,
             )),
             decoration: InputDecoration(
@@ -157,13 +158,13 @@ class _PasswordFieldState extends State<PasswordField> {
                   padding: const EdgeInsetsDirectional.only(start: 8.0),
                   child: Icon(
                     Icons.lock_outline_rounded, // this is for the help button
-                    color: LightBlueAccent,
+                    color: DarkBlueAccent,
                   ),
                 ),
                 labelText: 'Password...',
                 labelStyle: GoogleFonts.spaceGrotesk(
                   textStyle: TextStyle(
-                    color: LightGrey.withOpacity(0.8),
+                    color: DarkBlueAccent.withOpacity(1),
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                   ),

@@ -21,18 +21,19 @@ class SignInBttn extends StatelessWidget {
       child: TextButton(
           style: TextButton.styleFrom(
               padding: const EdgeInsets.all(15),
-              backgroundColor: DarkBlueAccent.withOpacity(0.6),
+              backgroundColor: LightPinkAccent.withOpacity(1),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(15),
                 side: BorderSide(
-                  color: LightBlueAccent.withOpacity(0.2),
+                  color: DarkBlueAccent.withOpacity(1),
+                  width: 3,
                 ),
               )),
           child: Text(
             "Sign in",
             style: GoogleFonts.spaceGrotesk(
                 textStyle: TextStyle(
-              color: LightGrey.withOpacity(0.8),
+              color: DarkBlueAccent.withOpacity(1),
               fontSize: 24,
               fontWeight: FontWeight.bold,
             )),
